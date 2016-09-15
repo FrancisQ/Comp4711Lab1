@@ -25,7 +25,7 @@ and open the template in the editor.
         $first->add_grade(75);
         $first->add_grade(55);
         $students['j123'] = $first;
-        
+
         //Second student
         $second = new Student();
         $second->surname = "Einstein";
@@ -38,7 +38,21 @@ and open the template in the editor.
         $second->add_grade(50);
         $students['a456'] = $second;
 
+        //Third Student
+        $third = new Student();
+        $third->surname = "Doo";
+        $third->first_name = "Scooby";
+        $third->add_email('home', 'scoobs@dog.com');
+        $third->add_grade(95);
+        $third->add_grade(70);
+        $third->add_grade(60);
+        $students['z007'] = $third;
+
+
+        //Sorting entries
         ksort($students);
+
+        //Print
         foreach ($students as $student)
             echo $student->toString();
         ?>
